@@ -1,10 +1,16 @@
 <h2>Employee List</h2>
+<div class="container">
+    <div class="alert alert-danger" *ngIf="response">
+        <strong>Success!! </strong>{{ response.responseMessage }}
+    </div>
+</div>
 <table class="table table-striped">
 <thead>
     <tr>
         <th>First Name</th>
         <th>Last Name</th>
         <th>Email Id</th>
+        <th>Actions</th>
     </tr>
 </thead>
 <tbody>
@@ -12,6 +18,11 @@
         <td>{{ employee.firstName }}</td>
         <td>{{ employee.lastName }}</td>
         <td>{{ employee.emailId }}</td>
+        <td>
+            <button (click) = "updateEmployee(employee.id)" class="btn btn-info text-white">Update</button>
+            <button (click) = "deleteEmployee(employee.id)" class="btn btn-danger text-white" style="margin-left: 10px;">Delete</button>
+            <button (click) = "employeeDetails(employee.id)" class="btn btn-success text-white" style="margin-left: 10px;">View</button>
+        </td>
     </tr>
 </tbody>
 </table>

@@ -1,0 +1,33 @@
+<div class="col-md-6 offset-md-3">
+    <h3>Update Employee Details</h3>
+    <div class="container">
+        <div class="alert alert-success" *ngIf="response">
+            <strong>Success!! </strong>{{ response.responseMessage }}
+        </div>
+    </div>
+    <div class="container">
+        <form (ngSubmit) = "update()">
+            <div class="form-group">
+                <label for="">First Name</label>
+                <input type="text" class="form-control" id="firstName"
+                [(ngModel)] = "updateEmployee.firstName" name="firstName">
+    
+            </div>
+            <div class="form-group">
+                <label for="">Last Name</label>
+                <input type="text" class="form-control" id="lastName"
+                [(ngModel)] = "updateEmployee.lastName" name="lastName">
+            </div>
+            <div class="form-group">
+                <label for="">Email</label>
+                <input type="email" class="form-control" id="emailId"
+                [(ngModel)] = "updateEmployee.emailId" name="emailId">
+            </div>
+            <div class="form-group">
+                <button class="btn btn-success" type="submit">Update</button>
+            </div>
+            
+        </form>
+    </div>
+    </div>
+    

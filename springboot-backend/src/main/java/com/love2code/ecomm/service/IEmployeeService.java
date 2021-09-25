@@ -11,4 +11,10 @@ public interface IEmployeeService {
 
 	EmployeeResponseStatus createEmployeeService(Employee employee);
 
+	Employee getEmployeeByIdService(Long id);
+
+	EmployeeResponseStatus updateEmployeeService(Employee employee, Long id);
+
+	EmployeeResponseStatus deleteEmployeeDetails(Long id);
+
 }
